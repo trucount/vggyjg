@@ -78,10 +78,6 @@ export class WebRTCService {
   private async initializePeer(): Promise<void> {
     return new Promise((resolve, reject) => {
       this.peer = new Peer(this.peerId, {
-        host: 'peerjs-server.herokuapp.com',
-        port: 443,
-        path: '/',
-        secure: true,
         config: {
           iceServers: [
             { urls: 'stun:stun.l.google.com:19302' },
